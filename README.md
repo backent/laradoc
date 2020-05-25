@@ -5,6 +5,17 @@ Install composer
 ```bash
 ./composer install
 ```
+
+Make .env from .env.example
+```bash
+cp .env.example .env
+```
+
+Generate app key
+```bash
+./php artisan key:generate
+```
+
 Build containers using docker-compose
 ```bash
 docker-compose up -d
