@@ -12,14 +12,29 @@ services:
     networks:
       - applaravel
   php:
-    image: php:7.2-fpm
+    build: .
     restart: unless-stopped
     container_name: laravel_docker_php
     volumes:
       - $PWD:/var/www/html
     networks: 
       - applaravel
-
+  db:
+    image: mysql:5.7.22
+    container_name: db
+    restart: unless-stopped
+    tty: true
+    environment:
+      MYSQL_DATABASE: testing
+      MYSQL_ROOT_PASSWORD: adminlocal
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - dbdata:/var/lib/mysql/
+    networks:
+      - applaravel
 networks:
   applaravel:
     driver: bridge
+volumes:
+  dbdata:

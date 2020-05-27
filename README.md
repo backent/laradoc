@@ -47,7 +47,9 @@ Example
 ```bash
 ./php -v
 ```
-
+## Database
+This project using mysql database.
+You can config the database at docker-compose.yml
 
 
 
