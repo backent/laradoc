@@ -11,15 +11,15 @@ Make .env from .env.example
 cp .env.example .env
 ```
 
-Generate app key
-```bash
-./php artisan key:generate
-```
-
 Build containers using docker-compose
 ```bash
 docker-compose up -d
 ```
+
+Generate app key
+```bash
+./php artisan key:generate
+
 
 Set Project permission
 ```bash
