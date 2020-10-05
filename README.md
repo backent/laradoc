@@ -1,6 +1,7 @@
 # Laravel with docker
 
 ## Installation
+
 Install composer
 ```bash
 ./composer install
